@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <script>
+
+    /**
+     * 九九乘法表
+     * 一共有 9 行，但是每行个数不一样，因此需要用到双重 for 循环
+     * 外层的 for 循环控制行数 i，循环 9 次
+     * 内层的 for 循环控制每行公式 j
+     * 核心算法：每一行公式的个数正好和行数一致  j <= i
+     * 每行打印完毕，需要重新换行
+     */
+    let str = ''
+    for (let i = 1; i <= 9; i ++) {
+      for (let j = 1; j <= i; j ++) {
+        str += j + 'x' + i + '=' + j * i + '\t'
+      }
+      str += '\n'
+    }
+    console.log(str)
+
+  </script>
+
+</head>
+<body>
+
+</body>
+</html>
