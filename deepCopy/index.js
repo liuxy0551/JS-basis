@@ -1,4 +1,8 @@
-// 深拷贝
+/**
+ * 深拷贝
+ * @param { Object, null, undefined } obj 
+ * @returns 
+ */
 function deepCopy (obj) {
   let result
   if (obj !== null && typeof obj === 'object') {
@@ -11,6 +15,7 @@ function deepCopy (obj) {
   }
   return result
 }
+
 
 /**
  * 验证

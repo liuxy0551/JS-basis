@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>防抖</title>
+    <button id="btn">点击</button>
+    <script>
+      // 验证
+      document.getElementById('btn').addEventListener('click', debounce(() => { console.log('执行函数') }, 2000))
+
+      // 实现
+      function debounce (func, delay = 600) {
+        let timer = null
+        return function () {
+          timer && clearTimeout(timer)
+          timer = setTimeout(() => {
+            func()
+          }, delay)
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

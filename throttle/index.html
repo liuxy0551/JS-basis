@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>节流</title>
+    <button id="btn">点击</button>
+    <script>
+      // 验证
+      document.getElementById('btn').addEventListener('click', throttle(() => { console.log('执行函数') }, 2000))
+
+      // 实现
+      function throttle (func, delay = 600) {
+        let timer = null
+        return function () {
+          if (timer) {
+            return
+          }
+          timer = setTimeout(() => {
+            timer = null
+            func()
+          }, delay)
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
